@@ -2,9 +2,12 @@ Deployment:
  - Local -> GitHub
  - GitHub -> S3 Bucket (via GitHub Actions and AWS Role 'github-deploy')
 
-Email routing:
+Email (Incoming)
  - Route 53 -> Cloudflare
- - Cloudflare -> personal inbox
+ - Cloudflare -> personal Gmail inbox
+
+Email (Outgoing)
+ - Gmail -> Gmail's SMTP servers (personal account 'send mail as')
 
 Serving:
  - Route 53 -> Cloudflare
